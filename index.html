@@ -1,46 +1,203 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meu Study Hub TI</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6fb; color: #1f2937; }
-    header { background: #1e3a8a; color: #fff; padding: 40px 20px; text-align: center; }
-    main { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-    section { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
-    h2 { color: #1e3a8a; margin-top: 0; }
-    a { color: #1d4ed8; }
-    footer { text-align: center; padding: 20px; color: #6b7280; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ezequiel Dedé | Meu Study Hub TI</title>
+<meta name="description" content="Portfólio de Ezequiel Dedé de Oliveira Costa, estudante de Engenharia de Software no UniCEUB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#1875E8;--escuro:#041832;--preto:#01080E;--texto:#fff;--suave:#b8c7dd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:linear-gradient(#1354A5 0%,#041832 33%,#041832 66%,#01080E 100%) fixed;color:var(--texto);font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh}
+a{color:inherit}
+:focus-visible{outline:3px solid #7db4ff;outline-offset:3px}
+h1,h2,h3{font-family:'Chakra Petch',sans-serif;line-height:1.1}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:24px}
+h3{font-size:20px}
+.topo{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(1,8,14,.82);backdrop-filter:blur(8px);border-bottom:1px solid rgba(24,117,232,.5)}
+.marca{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap}
+.topo nav{display:flex;gap:4px;overflow-x:auto}
+.topo nav a{padding:8px 14px;border-radius:12px;text-decoration:none;font-size:15px;color:var(--suave);white-space:nowrap;transition:background .2s,color .2s}
+.topo nav a:hover{background:rgba(24,117,232,.25);color:#fff}
+.pagina{max-width:1200px;margin:0 auto;padding:110px 24px 40px}
+.cartao{position:relative;border:1px solid var(--azul);border-radius:24px;box-shadow:4px 4px 20px rgba(1,8,14,.15);background:url(img/Ruido.png) center/100% 100%,rgba(4,24,50,.55)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;min-height:560px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/code.png) right center/auto 100% no-repeat;opacity:.35;z-index:-1}
+.hero-texto{padding:48px;align-self:center}
+.hero h1{font-size:clamp(44px,7vw,84px);margin-bottom:16px}
+.hero h1 span{color:var(--azul)}
+.hero p{font-size:20px;color:var(--suave);max-width:34em}
+.hero-robo{align-self:end;justify-self:center;max-height:540px;width:auto;max-width:100%}
+.botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.botao{display:inline-block;border-radius:16px;padding:14px 24px;font-size:18px;font-weight:600;text-decoration:none;background:var(--azul);border:2px solid var(--azul);transition:background .2s}
+.botao:hover{background:#0f5cc0}
+.botao.vazado{background:transparent}
+.botao.vazado:hover{background:rgba(24,117,232,.25)}
+.duas{align-items:start}
+.alura summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}
+.alura summary::-webkit-details-marker{display:none}
+.alura summary::before{content:"▸";color:#7db4ff;transition:transform .2s}
+.alura[open] summary::before{transform:rotate(90deg)}
+.alura summary small{font-size:14px;color:var(--suave)}
+.curso{margin-top:14px;padding:12px 16px;border:1px solid rgba(24,117,232,.45);border-radius:14px;background:rgba(24,117,232,.1)}
+.curso p{font-size:15px}
+section{margin-top:72px}
+.bloco{padding:36px}
+.sobre{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.sobre p{color:var(--suave);font-size:18px}
+.sobre p+p{margin-top:16px}
+.grupo+.grupo{margin-top:20px}
+.grupo h3{margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{border:1px solid var(--azul);border-radius:999px;padding:6px 14px;font-size:15px;background:rgba(24,117,232,.15)}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.linha{list-style:none;border-left:2px solid var(--azul);margin-left:6px}
+.linha li{position:relative;padding:0 0 28px 28px}
+.linha li:last-child{padding-bottom:0}
+.linha li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--azul);box-shadow:0 0 0 4px rgba(24,117,232,.25)}
+.linha time{display:block;font-size:14px;color:var(--suave)}
+.linha p{color:var(--suave);font-size:16px}
+.linha a{color:#7db4ff}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.disc{display:block;padding:24px;text-decoration:none;transition:transform .2s,border-color .2s}
+.disc:hover{transform:translateY(-4px);border-color:#7db4ff}
+.disc p{color:var(--suave);font-size:16px;margin-top:8px}
+.contato{text-align:center;padding:48px 24px}
+.contato p{color:var(--suave);font-size:18px}
+.contato .botoes{justify-content:center}
+footer{text-align:center;color:var(--suave);font-size:14px;padding:40px 0 8px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .rv.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+@media(max-width:860px){
+.hero,.sobre,.duas{grid-template-columns:1fr}
+.hero-texto{padding:32px 24px 8px}
+.hero-robo{max-height:320px}
+.bloco{padding:24px}
+.marca{display:none}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Meu Study Hub TI</h1>
-    <p>Ezequiel Dedé de Oliveira Costa — Engenharia de Software (Noturno, Turma A)</p>
-  </header>
-  <main>
-    <section>
-      <h2>Sobre mim</h2>
-      <p>Estudante de Engenharia de Software com interesse em Cibersegurança, Desenvolvimento, Dados e Inteligência Artificial. Este portfólio reúne a minha evolução acadêmica e profissional em TI.</p>
-    </section>
-    <section>
-      <h2>Disciplinas do 1º módulo</h2>
-      <ul>
-        <li><a href="02_Disciplinas_Atuais/Bootcamp_I/">Bootcamp I</a></li>
-        <li><a href="02_Disciplinas_Atuais/Banco_de_Dados_1/">Banco de Dados 1</a></li>
-        <li><a href="02_Disciplinas_Atuais/Engenharia_de_Software/">Engenharia de Software</a></li>
-        <li><a href="02_Disciplinas_Atuais/Fundamentos_da_Engenharia/">Fundamentos da Engenharia</a></li>
-        <li><a href="02_Disciplinas_Atuais/Introducao_a_Computacao/">Introdução à Computação</a></li>
-        <li><a href="02_Disciplinas_Atuais/Logica_de_Programacao/">Lógica de Programação</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contato</h2>
-      <p>E-mail: <a href="mailto:ezequieldede@sempreceub.com">ezequieldede@sempreceub.com</a></p>
-      <p>GitHub: <a href="https://github.com/ezequieldede005">github.com/ezequieldede005</a></p>
-    </section>
-  </main>
-  <footer>Versão 1.1 — Study Hub</footer>
+<header class="topo">
+  <a class="marca" href="#inicio">Ezequiel Dedé</a>
+  <nav aria-label="Navegação principal">
+    <a href="#sobre">Sobre</a>
+    <a href="#trajetoria">Trajetória</a>
+    <a href="#disciplinas">Disciplinas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main class="pagina" id="inicio">
+  <div class="cartao hero rv">
+    <div class="hero-texto">
+      <h1>Olá, eu sou o <span>Ezequiel</span></h1>
+      <p>Estudante de Engenharia de Software no UniCEUB, construindo uma base sólida em programação, dados e segurança da informação.</p>
+      <div class="botoes">
+        <a class="botao" href="https://www.linkedin.com/in/ezequiel-dede" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="botao vazado" href="https://github.com/ezequieldede005" target="_blank" rel="noopener">GitHub</a>
+        <a class="botao vazado" href="mailto:ezequieldede@sempreceub.com">E-mail</a>
+      </div>
+    </div>
+    <img class="hero-robo" src="img/robot.png" alt="Robô com visor roxo, mascote do projeto" width="595" height="680">
+  </div>
+
+  <section id="sobre" class="rv">
+    <div class="cartao bloco sobre">
+      <div>
+        <h2>Sobre mim</h2>
+        <p>Sempre me identifiquei com tecnologia, e essa curiosidade virou a decisão de cursar Engenharia de Software. Estudo as disciplinas da faculdade e complemento com os cursos da Alura, em busca de uma formação prática e constante.</p>
+        <p>Meu objetivo é sair da graduação com uma base sólida de programação e atuar de forma remota, inclusive para empresas no exterior. Me interesso por análise de dados e por segurança da informação: gosto de entender como sites e sistemas protegem (ou falham em proteger) os dados dos usuários.</p>
+      </div>
+      <div>
+        <div class="grupo">
+          <h3>Habilidades técnicas</h3>
+          <ul class="chips"><li>JavaScript</li><li>Lógica de programação</li><li>Banco de dados</li><li>Git e GitHub</li></ul>
+        </div>
+        <div class="grupo">
+          <h3>Áreas de interesse</h3>
+          <ul class="chips"><li>Cibersegurança</li><li>Desenvolvimento</li><li>Dados</li><li>Inteligência Artificial</li></ul>
+        </div>
+        <div class="grupo">
+          <h3>Fora da TI</h3>
+          <ul class="chips"><li>Fotografia</li><li>Filmagem</li><li>Produção audiovisual</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trajetoria" class="rv">
+    <h2>Trajetória</h2>
+    <div class="duas">
+      <div class="cartao bloco">
+        <h3 style="margin-bottom:24px">Formação e certificados</h3>
+        <ul class="linha">
+          <li><time>Jul. de 2026 a jun. de 2029</time><strong>Bacharelado em Engenharia de Software</strong><p>UniCEUB, Centro Universitário de Brasília.</p></li>
+          <li>
+            <details class="alura" open>
+              <summary><strong>Cursos Alura</strong> <small>em andamento, novos cursos serão adicionados</small></summary>
+              <!-- Novo curso Alura: copie um bloco "curso" abaixo e cole no topo da lista -->
+              <div class="curso"><time>Out. de 2026</time><strong>Lógica de programação</strong><p>Certificado Alura.</p></div>
+              <div class="curso"><time>Jun. de 2026</time><strong>Começando em Programação</strong><p>Certificado Alura. <a href="https://cursos.alura.com.br/certificate/881a695a-7a96-48ee-9764-81bc86d3f5df" target="_blank" rel="noopener">Ver credencial</a></p></div>
+            </details>
+          </li>
+          <li><time>Set. de 2023</time><strong>Sistema Eletrônico de Informações, SEI! USAR</strong><p>Enap, Escola Nacional de Administração Pública. 20 horas, nota final 85.</p></li>
+          <li><time>Jan. de 2022</time><strong>Informática</strong><p>Máximo Sucesso Preparatórios. 146 horas: Introdução à Informática, Windows 10, Word 2016, Excel 2016, PowerPoint 2016, Photoshop CC e Adobe Illustrator CS6.</p></li>
+          <li><time>Mar. de 2021</time><strong>Marketing Digital COMPLETO 2021</strong><p>Udemy. 18 horas. <a href="https://ude.my/UC-9816278b-1161-4614-ae1c-fdb626ba6262" target="_blank" rel="noopener">Ver credencial</a></p></li>
+          <li><time>2023 a 2024</time><strong>Ensino Médio</strong><p>IESB, Instituto de Educação Superior de Brasília.</p></li>
+        </ul>
+      </div>
+      <div class="cartao bloco">
+        <h3 style="margin-bottom:24px">Experiência</h3>
+        <ul class="linha">
+          <li><time>Out. de 2022 até hoje</time><strong>Fotógrafo e produtor cinematográfico</strong><p>dede fotografias (autônomo), Brasília. Filmagem, fotografia de eventos e retratos.</p></li>
+          <li><time>Out. de 2022 até hoje</time><strong>Voluntário, produtor cinematográfico</strong><p>ADTAG Sede, Brasília. Também no ADTAG Kids, cuidando de crianças em ações sociais.</p></li>
+          <li><time>Mar. de 2024 a mar. de 2025</time><strong>Soldado</strong><p>Exército Brasileiro, Brasília.</p></li>
+          <li><time>Set. de 2023 a fev. de 2024</time><strong>Estagiário</strong><p>Câmara Legislativa do Distrito Federal, Brasília.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="disciplinas" class="rv">
+    <h2>Disciplinas do 1º módulo</h2>
+    <div class="grade">
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Bootcamp_I" target="_blank" rel="noopener"><h3>Bootcamp I</h3><p>Arquitetura do Study Hub e entregas do projeto.</p></a>
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Banco_de_Dados_1" target="_blank" rel="noopener"><h3>Banco de Dados 1</h3><p>Estruturação e manipulação de dados, com exercícios práticos.</p></a>
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Engenharia_de_Software" target="_blank" rel="noopener"><h3>Engenharia de Software</h3><p>Processos de desenvolvimento e requisitos.</p></a>
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Fundamentos_da_Engenharia" target="_blank" rel="noopener"><h3>Fundamentos da Engenharia</h3><p>Base teórica para as demais disciplinas técnicas.</p></a>
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Introducao_a_Computacao" target="_blank" rel="noopener"><h3>Introdução à Computação</h3><p>Conceitos básicos de lógica computacional e sistemas.</p></a>
+      <a class="cartao disc" href="https://github.com/ezequieldede005/Meu_Study_Hub_TI/tree/main/02_Disciplinas_Atuais/Logica_de_Programacao" target="_blank" rel="noopener"><h3>Lógica de Programação</h3><p>Listas de exercícios e resumos de código.</p></a>
+    </div>
+  </section>
+
+  <section id="contato" class="rv">
+    <div class="cartao contato">
+      <h2>Vamos conversar</h2>
+      <p>Aberto a conexões, projetos e oportunidades remotas.</p>
+      <div class="botoes">
+        <a class="botao" href="https://www.linkedin.com/in/ezequiel-dede" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="botao vazado" href="https://github.com/ezequieldede005" target="_blank" rel="noopener">GitHub</a>
+        <a class="botao vazado" href="mailto:ezequieldede@sempreceub.com">ezequieldede@sempreceub.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Meu Study Hub TI, versão 1.2</footer>
+</main>
+
+<script>
+document.documentElement.classList.add('js');
+var itens=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
+  itens.forEach(function(i){obs.observe(i)});
+}else{itens.forEach(function(i){i.classList.add('vis')})}
+</script>
 </body>
 </html>
