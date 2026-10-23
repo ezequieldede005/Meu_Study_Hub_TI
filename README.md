@@ -7,10 +7,15 @@ Repositório criado para organizar minha jornada de estudos em Tecnologia da Inf
 - `01_Apresentacao_e_Perfil/` — perfil pessoal, biografia acadêmica e contato
 - `02_Disciplinas_Atuais/` — anotações, resumos e atividades das disciplinas do semestre
 - `03_Projetos_e_Certificados/` — projetos práticos e certificados obtidos
-- https://ezequieldede005.github.io/Meu_Study_Hub_TI/ meu site
 
 ## Convenções
 
 - Pastas numeradas na raiz para manter a ordem lógica
 - Nomes sem acentos e sem espaços, usando `_` entre palavras
 - Cada disciplina possui sua própria subpasta dentro de `02_Disciplinas_Atuais/`
+
+  ## Segurança e colaboração
+   - Política de segurança: [SECURITY.md](SECURITY.md)
+   - Guia de colaboração: [CONTRIBUTING.md](CONTRIBUTING.md)
+   - Licença: [MIT](LICENSE)
+   - Site publicado: https://ezequieldede005.github.io/Meu_Study_Hub_TI/
