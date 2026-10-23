@@ -1,0 +1,25 @@
+   name: Verificar site
+
+   on:
+     push:
+       branches: [ "main" ]
+     pull_request:
+       branches: [ "main" ]
+
+   jobs:
+     verificar:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Baixar o código
+           uses: actions/checkout@v4
+
+         - name: Validar HTML
+           uses: Cyb3r-Jak3/html5validator-action@v7
+           with:
+             root: .
+
+         - name: Verificar links
+           uses: lycheeverse/lychee-action@v2
+           with:
+             args: --no-progress --accept 200,204,206,403,429,999 './index.html' './README.md'
+             fail: true
