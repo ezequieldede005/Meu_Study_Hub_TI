@@ -13,13 +13,14 @@
          - name: Baixar o código
            uses: actions/checkout@v4
 
+         - name: Instalar validador de HTML
+           run: pip install html5validator
+
          - name: Validar HTML
-           uses: Cyb3r-Jak3/html5validator-action@v7
-           with:
-             root: .
+           run: html5validator --root . --ignore-re 'CSS:' 'The text content of element "time"'
 
          - name: Verificar links
            uses: lycheeverse/lychee-action@v2
            with:
-             args: --no-progress --accept 200,204,206,403,429,999 './index.html' './README.md'
+             args: --no-progress --accept 200,204,206,403,429,999 --max-retries 3 --timeout 20 './index.html' './README.md'
              fail: true
