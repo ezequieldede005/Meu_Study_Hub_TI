@@ -19,3 +19,5 @@ Repositório criado para organizar minha jornada de estudos em Tecnologia da Inf
    - Guia de colaboração: [CONTRIBUTING.md](CONTRIBUTING.md)
    - Licença: [MIT](LICENSE)
    - Site publicado: https://ezequieldede005.github.io/Meu_Study_Hub_TI/
+
+Última atualização: entrega final do Bootcamp I.
